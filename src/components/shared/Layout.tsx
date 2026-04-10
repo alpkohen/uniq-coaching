@@ -1,5 +1,4 @@
 import { ReactNode } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { Profile } from '../../lib/types'
 
 interface Props {
@@ -9,8 +8,6 @@ interface Props {
 }
 
 export function Layout({ profile, onSignOut, children }: Props) {
-  const navigate = useNavigate()
-
   return (
     <div style={{ minHeight: '100vh', background: '#f9fafb' }}>
       <nav style={{
@@ -22,12 +19,15 @@ export function Layout({ profile, onSignOut, children }: Props) {
         alignItems: 'center',
         justifyContent: 'space-between',
       }}>
-        <button
-          onClick={() => navigate('/')}
-          style={{ background: 'none', border: 'none', color: '#fff', fontSize: 18, fontWeight: 700, cursor: 'pointer' }}
+        <a
+          href="/"
+          style={{
+            background: 'none', border: 'none', color: '#fff', fontSize: 18, fontWeight: 700,
+            cursor: 'pointer', textDecoration: 'none',
+          }}
         >
           UNIQ Coaching
-        </button>
+        </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
           <span style={{ fontSize: 14, color: '#94a3b8' }}>
             {profile.full_name} · {profile.role === 'manager' ? 'Yönetici' : 'Öğrenen'}

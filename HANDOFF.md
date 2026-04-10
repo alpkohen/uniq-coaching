@@ -52,7 +52,7 @@ RLS politikaları aktif: manager geniş okuma, learner yalnızca kendi verisi.
 ## Kalan Adımlar
 
 ### Öncelikli
-- [ ] **Uçtan uca test**: Alp görev oluştursun → Sibel görsün, not eklesin, Claude'a sorsun → Alp chat logunu görsün
+- [x] **Uçtan uca test**: Alp görev oluştursun → Sibel görsün, not eklesin, Claude'a sorsun → Alp chat logunu görsün — `npm run test:e2e` ile API/RLS doğrulandı (2026-04-10)
 - [ ] **`main` branch**: `feature/ai-chat` → `main`'e merge edip Netlify'ı `main`'e bağla
 - [ ] **Şifre değiştirme**: Test şifrelerini (`coach1234`, `learn1234`) Supabase Auth üzerinden güvenli şifrelerle değiştir
 
